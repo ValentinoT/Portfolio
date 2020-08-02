@@ -17,7 +17,7 @@ export default function Layout ({ children }) {
       </Helmet>
       <ThemeProvider theme={themes[theme]}>
         <Reset />
-        <Header toggleTheme={toggleTheme} />
+        <Header toggleTheme={toggleTheme} themeMode={theme} />
         {children}
       </ThemeProvider>
     </>
