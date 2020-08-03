@@ -1,8 +1,13 @@
 import styled, { css } from 'styled-components'
+import { device } from '../styles/Generals'
 
 export const MyHeader = styled.header`
   padding: 20px;
   display: flex;
+  @media ${device.tablet}{
+    padding: 16px;
+    flex-wrap: wrap;
+  }
 `
 
 export const ContainerImage = styled.div`
@@ -13,12 +18,45 @@ export const ContainerImage = styled.div`
   overflow: hidden;
   flex-shrink: 0;
   filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
+  @media ${device.tablet}{
+    width: 64px;
+    height: 64px;
+  }
+  @media ${device.mobileL}{
+    width: 48px;
+    height: 48px;
+  }
 `
 export const ContainerText = styled.div`
   flex-grow: 1;
   padding: 0 20px;
+  @media ${device.tablet}{
+    padding: 0 16px;
+    align-self: center;
+    && p{
+      display: none;
+    }
+  }
 `
-
+export const ContainerTextTablet = styled.div`
+  display: none;
+  order: 1;
+  width: 100%;
+  @media ${device.tablet}{
+    display: block;
+  }
+  @media ${device.mobileL}{
+    display: none;
+  }
+`
+export const ContainerTextMovile = styled.div`
+  display: none;
+  order: 1;
+  width: 100%;
+  @media ${device.mobileL}{
+    display: block;
+  }
+`
 export const ButtonToggleTheme = styled.button`
   width: 40px;
   height: 40px;

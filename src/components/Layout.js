@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components'
 import { useTheme } from '../hooks/useTheme'
 import { themes } from '../themes'
 import { Header } from './Header'
+import { Navbar } from './Navbar'
 
 export default function Layout ({ children }) {
   const [theme, toggleTheme] = useTheme()
@@ -18,6 +19,7 @@ export default function Layout ({ children }) {
       <ThemeProvider theme={themes[theme]}>
         <Reset />
         <Header toggleTheme={toggleTheme} themeMode={theme} />
+        <Navbar />
         {children}
       </ThemeProvider>
     </>
