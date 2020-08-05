@@ -1,10 +1,17 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { device } from '../styles/Generals'
 
 export const ContainerMenuVertical = styled.div`
   height: 402.433px;
   width: 52px;
   position: relative;
+  @media ${device.tablet}{
+    width: 100%;
+    height: 54px;
+    position: fixed;
+    bottom: 0;
+  }
 `
 
 export const ContainerMenu = styled.nav`
@@ -16,13 +23,29 @@ export const ContainerMenu = styled.nav`
   transform: rotate(-90deg);
   transform-origin: left top 0;
   margin-bottom: -32px;
+  @media ${device.tablet}{
+    transform: rotate(0);
+    margin-bottom: 0;
+    position: initial;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: ${({ theme }) => theme.colors.backgroundMenuMobile};
+    border-radius: 5px 5px 0 0;
+    filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
+    flex-direction: row-reverse;
+  }
 `
 
 export const StyledLink = styled(Link)`
   display:flex;
   align-items: center;
   text-decoration: none;
-  &&:nth-child(2){
+  &&:nth-child(1){
+    display: none;
+  }
+  &&:nth-child(3){
     margin: 0 20px;
   }
   &&.active > div{
@@ -50,6 +73,14 @@ export const StyledLink = styled(Link)`
   &&.active > hr{
     width: 20px;
   }
+  @media ${device.tablet}{
+    &&:nth-child(1){
+      display: flex;
+    }
+    &&:nth-child(3){
+      margin: 0;
+    }
+  }
 `
 
 export const ContainerIcon = styled.div`
@@ -57,6 +88,14 @@ export const ContainerIcon = styled.div`
   height: 32px;
   border-radius: 5px;
   position: relative;
+  @media ${device.tablet}{
+    width: 40px;
+    height: 40px;
+    && svg{
+      width: 25px;
+      height: 25px;
+    }
+  }
 `
 
 export const TextMenu = styled.p`
@@ -65,6 +104,9 @@ export const TextMenu = styled.p`
   font-weight: 600;
   padding-left: 10px;
   transition: all 0.15s linear;
+  @media ${device.tablet}{
+    display: none;
+  }
 `
 export const Line = styled.hr`
   width: 0px;
@@ -73,4 +115,7 @@ export const Line = styled.hr`
   margin: 0 0 0 10px;
   border: none;
   transition: all 0.15s linear;
+  @media ${device.tablet}{
+    display: none;
+  }
 `

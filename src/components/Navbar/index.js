@@ -6,11 +6,21 @@ import { AboutMyInactive } from '../../icons/AboutMyInactive'
 import { AboutMyActive } from '../../icons/AboutMyActive'
 import { BlogInactive } from '../../icons/BlogInactive'
 import { BlogActive } from '../../icons/BlogActive'
+import { ContactInactive } from '../../icons/ContactInactive'
+import { ContactActive } from '../../icons/ContactActive'
 
 export const Navbar = () => {
   return (
     <ContainerMenuVertical>
       <ContainerMenu>
+        <StyledLink to='/contacto' activeClassName='active'>
+          <ContainerIcon>
+            <ContactInactive className='inactive-icon' />
+            <ContactActive className='active-icon' />
+          </ContainerIcon>
+          <TextMenu>Contacto</TextMenu>
+          <Line />
+        </StyledLink>
         <StyledLink to='/blog' activeClassName='active'>
           <ContainerIcon>
             <BlogInactive className='inactive-icon' />
