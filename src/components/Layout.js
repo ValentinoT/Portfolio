@@ -7,6 +7,8 @@ import { useTheme } from '../hooks/useTheme'
 import { themes } from '../themes'
 import { Header } from './Header'
 import { Navbar } from './Navbar'
+import { Footer } from './Footer'
+import { GeneralContainer, MainContainer } from '../components/styles/Generals'
 
 export default function Layout ({ children }) {
   const [theme, toggleTheme] = useTheme()
@@ -17,10 +19,15 @@ export default function Layout ({ children }) {
         <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet' />
       </Helmet>
       <ThemeProvider theme={themes[theme]}>
-        <Reset />
-        <Header toggleTheme={toggleTheme} themeMode={theme} />
-        <Navbar />
-        {children}
+        <GeneralContainer>
+          <Reset />
+          <Header toggleTheme={toggleTheme} themeMode={theme} />
+          <MainContainer>
+            <Navbar />
+            {children}
+          </MainContainer>
+          <Footer />
+        </GeneralContainer>
       </ThemeProvider>
     </>
   )

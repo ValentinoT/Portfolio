@@ -21,6 +21,18 @@ export const device = {
   desktopL: `(max-width: ${size.desktop})`
 }
 
+export const GeneralContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`
+
+export const MainContainer = styled.main`
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+`
+
 export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.title};
   font-size: ${({ size = '28px' }) => size};

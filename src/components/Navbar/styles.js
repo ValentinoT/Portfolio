@@ -4,7 +4,7 @@ import { device } from '../styles/Generals'
 
 export const ContainerMenuVertical = styled.div`
   height: 402.433px;
-  width: 52px;
+  width: 72px;
   position: relative;
   @media ${device.tablet}{
     width: 100%;
@@ -50,6 +50,7 @@ export const StyledLink = styled(Link)`
   }
   &&.active > div{
     background-color: ${({ theme }) => theme.colors.yellow};
+    box-shadow: 0 2px 13px 0 rgba(247,223,30,.1);
   }
   && svg{
     transition: all 0.15s linear;
