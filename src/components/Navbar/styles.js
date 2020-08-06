@@ -4,8 +4,9 @@ import { device } from '../styles/Generals'
 
 export const ContainerMenuVertical = styled.div`
   height: 402.433px;
-  width: 72px;
+  width: 120px;
   position: relative;
+  flex-shrink: 0;
   @media ${device.tablet}{
     width: 100%;
     height: 54px;
