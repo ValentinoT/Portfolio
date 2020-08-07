@@ -7,7 +7,8 @@ export const themes = {
       yellow: '#F7DF1E',
       outstanding: '#000000',
       backgroundMenuMobile: '#FFFFFF',
-      backgroundCardProject: '#FFFFFF'
+      backgroundCardProject: '#FFFFFF',
+      shadow: '0px 0px 20px rgba(0, 0, 0, 0.2)'
     }
   },
   dark: {
@@ -18,7 +19,8 @@ export const themes = {
       yellow: '#F7DF1E',
       outstanding: '#FFFFFF',
       backgroundMenuMobile: '#373C3F',
-      backgroundCardProject: '#181818'
+      backgroundCardProject: '#181818',
+      shadow: 'none'
     }
   }
 }
