@@ -1,75 +1,50 @@
 import React from 'react'
-import { SwiperSlide } from 'swiper/react'
-import SwiperCore, { Autoplay, Keyboard } from 'swiper'
-import SwiperStyles from './RequiredStyles.css'
-import { CarrouselProjects, CardProjectContainer } from './styles'
+import { CardProjectContainer, HeaderProject, ContainerHeaderTextBox, HeaderTitle, ContainerHeaderIcons, ContainerImageDesktop, ContainerImageTablet, ContainerImageMobile, FooterProject, TitleProject, ShortDescription } from './styles'
+import { Image } from '../Image'
+import { HTML5 } from '../../icons/HTML5'
+import { CSS3 } from '../../icons/CSS3'
+import { Javascript } from '../../icons/Javascript'
 
-SwiperCore.use([Autoplay, Keyboard])
-
-export const CardProject = () => {
+export const CardProject = (
+  {
+    url = '/',
+    icons = [<HTML5 />, <CSS3 />, <Javascript />],
+    imgDesktop = 'ProjectDesktop.jpg',
+    imgTablet = 'ProjectTablet.jpg',
+    imgMobile = 'ProjectMobile.jpg',
+    title = 'Título del Proyecto',
+    description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ligula velit. Insollicitudin condimentum quam...'
+  }
+) => {
   return (
-    <CarrouselProjects
-      className={SwiperStyles}
-      slidesPerView='auto'
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: true
-      }}
-      keyboard={{
-        enabled: true
-      }}
-      loop
-    >
-      <SwiperSlide>
-        <CardProjectContainer>
-          1
-        </CardProjectContainer>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardProjectContainer>
-          2
-        </CardProjectContainer>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardProjectContainer>
-          3
-        </CardProjectContainer>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardProjectContainer>
-          4
-        </CardProjectContainer>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardProjectContainer>
-          5
-        </CardProjectContainer>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardProjectContainer>
-          6
-        </CardProjectContainer>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardProjectContainer>
-          7
-        </CardProjectContainer>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardProjectContainer>
-          8
-        </CardProjectContainer>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardProjectContainer>
-          9
-        </CardProjectContainer>
-      </SwiperSlide>
-      <SwiperSlide>
-        <CardProjectContainer>
-          10
-        </CardProjectContainer>
-      </SwiperSlide>
-    </CarrouselProjects>
+    <CardProjectContainer to={url}>
+      <HeaderProject className='headerProject'>
+        <ContainerHeaderTextBox>
+          <HeaderTitle>Tecnologías</HeaderTitle>
+          <ContainerHeaderIcons>
+            {icons.map((icon, id) =>
+              <div key={id}>
+                {icon}
+              </div>
+            )}
+          </ContainerHeaderIcons>
+        </ContainerHeaderTextBox>
+      </HeaderProject>
+      <ContainerImageDesktop>
+        <Image name={imgDesktop} />
+      </ContainerImageDesktop>
+      <ContainerImageTablet>
+        <Image name={imgTablet} />
+      </ContainerImageTablet>
+      <ContainerImageMobile>
+        <Image name={imgMobile} />
+      </ContainerImageMobile>
+      <FooterProject className='footerProject'>
+        <TitleProject>{title}</TitleProject>
+        <ShortDescription>
+          {description}
+        </ShortDescription>
+      </FooterProject>
+    </CardProjectContainer>
   )
 }

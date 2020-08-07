@@ -1,9 +1,9 @@
 import React from 'react'
-import { CardProject } from '../components/CardProject'
+import { CarrouselProjects } from '../components/CarrouselProjects'
 export default function index () {
   return (
     <>
-      <CardProject />
+      <CarrouselProjects />
     </>
   )
 }
