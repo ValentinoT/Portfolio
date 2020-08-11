@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { device } from '../styles/Generals'
 import { Link } from 'gatsby'
 
 export const CardProjectContainer = styled(Link)`
@@ -21,6 +22,28 @@ export const CardProjectContainer = styled(Link)`
   }
   &&:hover .footerProject{
     opacity: 1;
+  }
+  @media ${device.tablet}{
+    width: 100%;
+    margin-bottom: 16px;
+    margin-right: 0;
+    height: 800px;
+    grid-template-columns: 60% auto;
+  }
+  @media (max-width: 668px){
+    height: 700px;
+  }
+  @media (max-width: 568px){
+    height: 600px;
+  }
+  @media ${device.mobileL}{
+    height: 500px;
+  }
+  @media ${device.mobileM}{
+    height: 450px;
+  }
+  @media ${device.mobileS}{
+    height: 400px;
   }
 `
 

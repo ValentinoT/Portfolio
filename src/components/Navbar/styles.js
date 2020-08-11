@@ -12,6 +12,7 @@ export const ContainerMenuVertical = styled.div`
     height: 54px;
     position: fixed;
     bottom: 0;
+    z-index: 10;
   }
 `
 
