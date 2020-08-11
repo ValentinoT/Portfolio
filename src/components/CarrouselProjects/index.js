@@ -14,7 +14,7 @@ import { ListProjects } from '../ListProjects'
 
 SwiperCore.use([Autoplay, Keyboard])
 
-export const CarrouselProjects = () => {
+export default function CarrouselProjects () {
   const [width] = useWidth()
   return (
     <>

@@ -1,5 +1,6 @@
 import React from 'react'
-import { CarrouselProjects } from '../components/CarrouselProjects'
+import loadable from '@loadable/component'
+const CarrouselProjects = loadable(() => import('../components/CarrouselProjects'))
 
 export default function index () {
   return (
