@@ -1,11 +1,11 @@
 import React from 'react'
 import loadable from '@loadable/component'
-const CarrouselProjects = loadable(() => import('../components/CarrouselProjects'))
+const Projects = loadable(() => import('../components/Projects'))
 
 export default function index () {
   return (
     <>
-      <CarrouselProjects />
+      <Projects />
     </>
   )
 }
