@@ -8,9 +8,12 @@ export const ContainerAbout = styled.section`
   align-items: center;
   margin: 0 20px;
   max-height: calc(100vh - 211px);
-  @media ${device.tablet}{
+  @media ${device.laptop}{
     flex-direction: column;
     max-height: none;
+    margin: 0 20px;
+  }
+  @media ${device.tablet}{
     margin: 0 16px;
   }
 `
@@ -21,8 +24,11 @@ export const ContainerText = styled.div`
   @media ${device.laptopL}{
     width: 60%;
   }
-  @media ${device.tablet}{
+  @media ${device.laptop}{
     width: 100%;
+    margin: 20px 0 0 0;
+  }
+  @media ${device.tablet}{
     margin: 16px 0 0 0;
   }
 `
@@ -46,12 +52,8 @@ export const TextAbout = styled(Text)`
   @media (max-width: 1136px){
     padding: 10px 0;
   }
-  @media (max-width: 921px){
-    line-height: 20px;
-  }
-  @media (max-width: 788px){
-    font-size: 14px;
-    line-height: 18px;
+  @media ${device.laptop}{
+    padding: 20px 0
   }
   @media ${device.tablet}{
     font-size: 16px;
@@ -74,9 +76,12 @@ export const ContainerImage = styled.div`
   @media ${device.laptopL}{
     width: 40%;
   }
-  @media ${device.tablet}{
+  @media ${device.laptop}{
     width: 100%;
-    margin: 16px 0 70px 0;
     max-height: none;
+    margin: 20px 0;
+  }
+  @media ${device.tablet}{
+    margin: 16px 0 70px 0;
   }
 `

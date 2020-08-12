@@ -5,10 +5,13 @@ import { Button } from '../Generals/Button'
 import { Text } from '../styles/Generals'
 import { Heart } from '../../icons/Heart'
 import { ButtonContact } from '../../icons/ButtonContact'
+import { useMatch } from '@reach/router'
 
 export const Footer = () => {
+  const about = useMatch('sobre-mi')
+
   return (
-    <ContainerFooter>
+    <ContainerFooter about={about}>
       <ContainerFooterLeft>
         <SocialNetworks />
         <AllRightsReserved>

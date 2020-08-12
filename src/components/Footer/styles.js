@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { device } from '../styles/Generals'
 
 export const ContainerFooter = styled.footer`
@@ -6,6 +6,13 @@ export const ContainerFooter = styled.footer`
   display: flex;
   align-items: center;
   padding: 20px;
+  @media ${device.laptop}{
+    ${({ about }) => about && css`
+      border-radius: 5px 5px 0 0;
+      background-color: ${({ theme }) => theme.colors.backgroundFooterTablet};
+      box-shadow: ${({ theme }) => theme.colors.shadow};
+    `}
+  }
   @media ${device.tablet}{
     display: none;
   }
