@@ -50,7 +50,7 @@ export const Title = styled.h1`
 export const SubTitle = styled.h3`
   color: ${({ theme }) => theme.colors.title};
   font-size: ${({ size = '16px' }) => size};
-  font-weight: 400;
+  font-weight: ${({ weight = 400 }) => weight};
   transition: all 0.15s linear;
   @media ${device.mobileM}{
     font-size: 14px;
@@ -62,7 +62,7 @@ export const Text = styled.p`
   padding-top: ${({ pt = '0px' }) => pt};
   padding-bottom: ${({ pb = '0px' }) => pb};
   line-height: ${({ lh = '20px' }) => lh};
-  font-weight: 300;
+  font-weight: ${({ weight = 300 }) => weight};
   transition: all 0.15s linear;
   @media ${device.tablet}{
     padding-top: 16px;

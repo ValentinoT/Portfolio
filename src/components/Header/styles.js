@@ -30,6 +30,9 @@ export const ContainerImage = styled.div`
 export const ContainerText = styled.div`
   flex-grow: 1;
   padding: 0 20px;
+  ${({ about, contact }) => (about || contact) && css`
+    align-self: center;
+  `}
   @media ${device.tablet}{
     padding: 0 16px;
     align-self: center;

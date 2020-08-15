@@ -3,16 +3,18 @@ import { MyHeader, ContainerImage, ContainerText, ContainerTextTablet, Container
 import { Sun } from '../../icons/Sun'
 import { Image } from '../Image'
 import { SubTitle, Title, Text } from '../styles/Generals'
-import { useLocation } from '@reach/router'
+import { useLocation, useMatch } from '@reach/router'
 
 export const Header = ({ toggleTheme, themeMode }) => {
   const { pathname } = useLocation()
+  const about = useMatch('sobre-mi')
+  const contact = useMatch('contacto')
   return (
     <MyHeader>
       <ContainerImage>
         <Image name='valentino.png' />
       </ContainerImage>
-      <ContainerText>
+      <ContainerText about={about} contact={contact}>
         <SubTitle>Hola soy,</SubTitle>
         <Title>Valentino Torres</Title>
         {pathname === '/'

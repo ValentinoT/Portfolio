@@ -6,7 +6,7 @@ import { Instagram } from '../../../icons/Instagram'
 
 export const SocialNetworks = () => {
   return (
-    <ContainerSocialNetworks>
+    <ContainerSocialNetworks className='social-networks'>
       <SocialNetwork href='https://www.linkedin.com/' target='_blank'>
         <Linkedin />
       </SocialNetwork>

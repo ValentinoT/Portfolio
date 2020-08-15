@@ -1,7 +1,7 @@
 import React from 'react'
 import { ContainerFooter, ContainerFooterLeft, AllRightsReserved } from './styles'
 import { SocialNetworks } from '../Generals/SocialNetworks'
-import { Button } from '../Generals/Button'
+import { LinkButton } from '../Generals/LinkButton'
 import { Text } from '../styles/Generals'
 import { Heart } from '../../icons/Heart'
 import { ButtonContact } from '../../icons/ButtonContact'
@@ -9,20 +9,20 @@ import { useMatch } from '@reach/router'
 
 export const Footer = () => {
   const about = useMatch('sobre-mi')
-
+  const contact = useMatch('contacto')
   return (
-    <ContainerFooter about={about}>
-      <ContainerFooterLeft>
+    <ContainerFooter about={about} contact={contact}>
+      <ContainerFooterLeft className='container-footer-left'>
         <SocialNetworks />
-        <AllRightsReserved>
+        <AllRightsReserved className='all-rights-reserved'>
           <Text size='12px'>Hecho con</Text>
           <Heart />
           <Text size='12px'>en Colombia | Todos los derechos reservados</Text>
         </AllRightsReserved>
       </ContainerFooterLeft>
-      <Button icon={<ButtonContact />}>
+      <LinkButton url='/contacto' icon={<ButtonContact />} className='button-contact'>
         Contacto
-      </Button>
+      </LinkButton>
     </ContainerFooter>
   )
 }

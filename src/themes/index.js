@@ -3,7 +3,7 @@ export const themes = {
     colors: {
       background: '#ffffff',
       title: '#000000',
-      text: '#8B8B8B',
+      text: '#333333',
       yellow: '#F7DF1E',
       outstanding: '#000000',
       backgroundMenuMobile: '#FFFFFF',
@@ -12,7 +12,8 @@ export const themes = {
       shadow: '0px 0px 20px rgba(0, 0, 0, 0.2)',
       gradientProjectTop: 'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%)',
       gradientProjectBottom: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)',
-      iconText: '#202020'
+      iconText: '#202020',
+      error: '#FF4949'
     }
   },
   dark: {
@@ -28,7 +29,8 @@ export const themes = {
       shadow: 'none',
       gradientProjectTop: 'linear-gradient(180deg, rgba(40, 40, 40, 0.8) 0%, rgba(0, 0, 0, 0) 100%)',
       gradientProjectBottom: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(40, 40, 40, 0.8) 100%)',
-      iconText: '#FFFFFF'
+      iconText: '#FFFFFF',
+      error: '#FF4949'
     }
   }
 }

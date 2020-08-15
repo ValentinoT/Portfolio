@@ -6,6 +6,21 @@ export const ContainerFooter = styled.footer`
   display: flex;
   align-items: center;
   padding: 20px;
+  ${({ contact }) => contact && css`
+    && .container-footer-left,
+    && .all-rights-reserved{
+      justify-content: center;
+    }
+    && .all-rights-reserved{
+      margin-top: 0;
+    }
+    && .social-networks{
+      display: none;
+    }
+    && .button-contact{
+      display: none;
+    }
+  `}
   @media ${device.laptop}{
     ${({ about }) => about && css`
       border-radius: 5px 5px 0 0;
