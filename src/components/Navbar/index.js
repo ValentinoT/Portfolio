@@ -48,7 +48,7 @@ export const Navbar = () => {
   }, [matchProjects, matchAbout, matchBlog, matchContact])
 
   return (
-    <ContainerMenuVertical>
+    <ContainerMenuVertical blog={matchBlog}>
       <ContainerMenu>
         <StyledLink to='/contacto' activeClassName='active' id='contacto'>
           <ContainerIcon>

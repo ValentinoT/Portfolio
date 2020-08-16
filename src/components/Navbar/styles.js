@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 import { device } from '../styles/Generals'
 
@@ -13,7 +13,17 @@ export const ContainerMenuVertical = styled.div`
     position: fixed;
     bottom: 0;
     z-index: 10;
+    ${({ blog }) => blog && css`
+    position: fixed;
+    top: auto;
+    transform: translate(0)
+  `}
   }
+  ${({ blog }) => blog && css`
+    position: fixed;
+    top: 54%;
+    transform: translate(0,-50%)
+  `}
 `
 
 export const ContainerMenu = styled.nav`

@@ -9,12 +9,14 @@ export const Header = ({ toggleTheme, themeMode }) => {
   const { pathname } = useLocation()
   const about = useMatch('sobre-mi')
   const contact = useMatch('contacto')
+  const blog = useMatch('blog')
+
   return (
-    <MyHeader>
-      <ContainerImage>
+    <MyHeader blog={blog}>
+      <ContainerImage className='containerImage'>
         <Image name='valentino.png' />
       </ContainerImage>
-      <ContainerText about={about} contact={contact}>
+      <ContainerText about={about} contact={contact} blog={blog}>
         <SubTitle>Hola soy,</SubTitle>
         <Title>Valentino Torres</Title>
         {pathname === '/'

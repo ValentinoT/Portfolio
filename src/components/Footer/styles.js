@@ -6,6 +6,32 @@ export const ContainerFooter = styled.footer`
   display: flex;
   align-items: center;
   padding: 20px;
+  ${({ blog }) => blog && css`
+    width: 100px;
+    padding-right: 0;
+    && .all-rights-reserved{
+      display: none;
+    }
+    && .social-networks{
+      position: fixed;
+      bottom: 20px;
+    }
+    && .social-networks a{
+      width: 23.33px;
+      height: 23.33px;
+      margin-right: 5px;
+    }
+    && .social-networks a:last-child{
+      margin-right: 0;
+    }
+    && .social-networks a svg{
+      width: 14px;
+      height: 14px;
+    }
+    && .button-contact{
+      display: none;
+    }
+  `}
   ${({ contact }) => contact && css`
     && .container-footer-left,
     && .all-rights-reserved{
