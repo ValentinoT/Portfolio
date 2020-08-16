@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { device } from '../styles/Generals'
+import { device, SubTitle, Text } from '../styles/Generals'
 
 export const Form = styled.form`
   width: 100%;
@@ -33,6 +33,7 @@ export const Label = styled.label`
 
 export const InputText = styled.input`
   font-family: 'Poppins',sans-serif;
+  font-size: 14px;
   color: ${({ theme }) => theme.colors.text};
   box-sizing: border-box;
   width: 100%;
@@ -49,6 +50,7 @@ export const InputText = styled.input`
 
 export const InputTextarea = styled.textarea`
   font-family: 'Poppins',sans-serif;
+  font-size: 14px;
   color: ${({ theme }) => theme.colors.text};
   box-sizing: border-box;
   width: 100%;
@@ -64,5 +66,29 @@ export const InputTextarea = styled.textarea`
   padding: 10px 20px;
   @media ${device.tablet}{
     margin-bottom: 16px;
+  }
+`
+
+export const ContainerMessageSent = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+export const Title = styled(SubTitle)`
+  padding: 20px 0; 
+  @media ${device.mobileM}{
+    font-size: 22px;
+  }
+`
+
+export const TextSent = styled(Text)`
+  text-align: center;
+  max-width: 350px;
+  @media ${device.tablet}{
+    padding-top: 0;
   }
 `

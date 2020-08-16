@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
-import { Form, ContainerInput, Label, InputText, InputTextarea } from './styles'
+import React, { useState, useEffect } from 'react'
+import { Form, ContainerInput, Label, InputText, InputTextarea, ContainerMessageSent, Title, TextSent } from './styles'
 import { Button } from '../Generals/Button'
 import { ButtonContact } from '../../icons/ButtonContact'
 import { useInput } from '../../hooks/useInput'
+import { PopUp } from '../PopUp'
+import { IconMessageSent } from '../../icons/IconMessageSent'
 
 export const ContactForm = () => {
   const name = useInput('', 'inputName', 'labelName')
@@ -11,6 +13,7 @@ export const ContactForm = () => {
   const message = useInput('', 'inputMessage', 'labelMessage')
 
   const [status, setStatus] = useState('')
+  const [open, setOpen] = useState(false)
 
   const submitForm = (e) => {
     e.preventDefault()
@@ -22,15 +25,8 @@ export const ContactForm = () => {
     xhr.onreadystatechange = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return
       if (xhr.status === 200) {
-        name.reset()
-        name.removeActive()
-        email.reset()
-        email.removeActive()
-        subject.reset()
-        subject.removeActive()
-        message.reset()
-        message.removeActive()
-        setStatus('enviado')
+        setOpen(true)
+        setStatus('success')
       } else {
         setStatus('error')
       }
@@ -45,19 +41,34 @@ export const ContactForm = () => {
         <InputText type='text' name='name' id='inputName' required value={name.value} onChange={name.onChange} />
       </ContainerInput>
       <ContainerInput>
-        <Label htmlFor='email' id='labelEmail'>Email</Label>
+        <Label htmlFor='inputEmail' id='labelEmail'>Email</Label>
         <InputText type='email' name='_replyto' id='inputEmail' required value={email.value} onChange={email.onChange} />
       </ContainerInput>
       <ContainerInput>
-        <Label htmlFor='subject' id='labelSubject'>Asunto</Label>
+        <Label htmlFor='inputSubject' id='labelSubject'>Asunto</Label>
         <InputText type='text' name='subject' id='inputSubject' required value={subject.value} onChange={subject.onChange} />
       </ContainerInput>
       <ContainerInput>
-        <Label htmlFor='message' id='labelMessage'>Mensaje</Label>
+        <Label htmlFor='inputMessage' id='labelMessage'>Mensaje</Label>
         <InputTextarea name='message' id='inputMessage' required value={message.value} onChange={message.onChange} />
       </ContainerInput>
       <Button icon={<ButtonContact />}>Enviar</Button>
-      <p>{status}</p>
+      <PopUp open={open} setOpen={setOpen} name={name} email={email} subject={subject} message={message}>
+        <MessageSent name={name.value} />
+      </PopUp>
     </Form>
+  )
+}
+
+const MessageSent = ({ name }) => {
+  return (
+    <ContainerMessageSent>
+      <IconMessageSent />
+      <Title size='28px'>Mensaje Enviado!</Title>
+      <TextSent size='16px' lh='24px'>
+        Gracias por tu mensaje <b>{`${name}`}</b>,
+        responderé lo más pronto posible :)
+      </TextSent>
+    </ContainerMessageSent>
   )
 }
