@@ -10,13 +10,14 @@ export const Header = ({ toggleTheme, themeMode }) => {
   const about = useMatch('sobre-mi')
   const contact = useMatch('contacto')
   const blog = useMatch('blog')
+  const singleBlog = useMatch('blog/:name')
 
   return (
-    <MyHeader blog={blog}>
+    <MyHeader blog={blog} singleBlog={singleBlog}>
       <ContainerImage className='containerImage'>
         <Image name='valentino.png' />
       </ContainerImage>
-      <ContainerText about={about} contact={contact} blog={blog}>
+      <ContainerText about={about} contact={contact} blog={blog} singleBlog={singleBlog}>
         <SubTitle>Hola soy,</SubTitle>
         <Title>Valentino Torres</Title>
         {pathname === '/'
@@ -24,7 +25,7 @@ export const Header = ({ toggleTheme, themeMode }) => {
             Soy un frontend developer. Venezolano, pero actualmente viviendo en Colombia. Puedes
             encontrarme en las principales redes sociales como @ValentinoTorresDev. Me dedico al desarrollo
             de aplicaciones web y móviles.
-            </Text>
+          </Text>
           : ''}
       </ContainerText>
       <ContainerTextTablet>
@@ -33,14 +34,14 @@ export const Header = ({ toggleTheme, themeMode }) => {
             Soy un frontend developer. Venezolano, pero actualmente viviendo en Colombia. Puedes
             encontrarme en las principales redes sociales como @ValentinoTorresDev. Me dedico al desarrollo
             de aplicaciones web y móviles.
-            </Text>
+          </Text>
           : ''}
       </ContainerTextTablet>
       <ContainerTextMovile>
         {pathname === '/'
           ? <Text pt='10px'>
             Soy un frontend developer. Me dedico al desarrollo de aplicaciones web y móviles.
-            </Text>
+          </Text>
           : ''}
       </ContainerTextMovile>
       <ButtonToggleTheme onClick={toggleTheme} themeMode={themeMode}>

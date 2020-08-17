@@ -13,13 +13,13 @@ export const ContainerMenuVertical = styled.div`
     position: fixed;
     bottom: 0;
     z-index: 10;
-    ${({ blog }) => blog && css`
+    ${({ blog, singleBlog }) => (blog || singleBlog) && css`
     position: fixed;
     top: auto;
     transform: translate(0)
   `}
   }
-  ${({ blog }) => blog && css`
+  ${({ blog, singleBlog }) => (blog || singleBlog) && css`
     position: fixed;
     top: 54%;
     transform: translate(0,-50%)

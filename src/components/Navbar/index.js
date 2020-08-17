@@ -15,6 +15,7 @@ export const Navbar = () => {
   const matchAbout = useMatch('/sobre-mi')
   const matchBlog = useMatch('/blog')
   const matchContact = useMatch('/contacto')
+  const matchSingleBlog = useMatch('blog/:name')
 
   useEffect(() => {
     const projects = document.querySelector('#projects')
@@ -34,7 +35,7 @@ export const Navbar = () => {
       sobreMi.classList.remove('active')
     }
 
-    if (matchBlog) {
+    if (matchBlog || matchSingleBlog) {
       blog.classList.add('active')
     } else {
       blog.classList.remove('active')
@@ -48,7 +49,7 @@ export const Navbar = () => {
   }, [matchProjects, matchAbout, matchBlog, matchContact])
 
   return (
-    <ContainerMenuVertical blog={matchBlog}>
+    <ContainerMenuVertical blog={matchBlog} singleBlog={matchSingleBlog}>
       <ContainerMenu>
         <StyledLink to='/contacto' activeClassName='active' id='contacto'>
           <ContainerIcon>

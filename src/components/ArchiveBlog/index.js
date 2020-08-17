@@ -52,7 +52,7 @@ export const ArchiveBlog = () => {
       <SubTitle size='28px'>Últimos Posts</SubTitle>
       <GridPost>
         <LastPost
-          url='/'
+          url='/blog/que-es-react'
           image='porque-react.jpg'
           title='Por qué Utilizar React?'
           date='27/07/20'

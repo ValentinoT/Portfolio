@@ -9,11 +9,12 @@ import { useMatch } from '@reach/router'
 
 export const Footer = () => {
   const about = useMatch('sobre-mi')
-  const blog = useMatch('blog')
   const contact = useMatch('contacto')
+  const blog = useMatch('blog')
+  const singleBlog = useMatch('blog/:name')
 
   return (
-    <ContainerFooter about={about} contact={contact} blog={blog}>
+    <ContainerFooter about={about} contact={contact} blog={blog} singleBlog={singleBlog}>
       <ContainerFooterLeft className='container-footer-left'>
         <SocialNetworks />
         <AllRightsReserved className='all-rights-reserved'>
