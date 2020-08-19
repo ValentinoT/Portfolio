@@ -13,7 +13,8 @@ export const themes = {
       gradientProjectTop: 'linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%)',
       gradientProjectBottom: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)',
       iconText: '#202020',
-      error: '#FF4949'
+      error: '#FF4949',
+      border: 'rgba(55, 53, 47, 0.20)'
     }
   },
   dark: {
@@ -30,7 +31,8 @@ export const themes = {
       gradientProjectTop: 'linear-gradient(180deg, rgba(40, 40, 40, 0.8) 0%, rgba(0, 0, 0, 0) 100%)',
       gradientProjectBottom: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(40, 40, 40, 0.8) 100%)',
       iconText: '#FFFFFF',
-      error: '#FF4949'
+      error: '#FF4949',
+      border: 'rgba(255, 255, 255, 0.20)'
     }
   }
 }

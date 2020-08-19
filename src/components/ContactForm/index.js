@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Form, ContainerInput, Label, InputText, InputTextarea, ContainerMessageSent, Title, TextSent } from './styles'
 import { Button } from '../Generals/Button'
 import { ButtonContact } from '../../icons/ButtonContact'
@@ -12,7 +12,6 @@ export const ContactForm = () => {
   const subject = useInput('', 'inputSubject', 'labelSubject')
   const message = useInput('', 'inputMessage', 'labelMessage')
 
-  const [status, setStatus] = useState('')
   const [open, setOpen] = useState(false)
 
   const submitForm = (e) => {
@@ -26,9 +25,8 @@ export const ContactForm = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return
       if (xhr.status === 200) {
         setOpen(true)
-        setStatus('success')
       } else {
-        setStatus('error')
+        console.log('error')
       }
     }
     xhr.send(data)
