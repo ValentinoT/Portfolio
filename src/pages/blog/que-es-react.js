@@ -1,9 +1,8 @@
 import React from 'react'
 import { SingleBlog } from '../../components/SingleBlog'
 import { TextPost } from '../../components/SingleBlog/styles'
+import { Bookmark } from '../../components/Generals/Bookmark'
 import { CodeBlock } from '../../components/Generals/CodeBlock'
-import loadable from '@loadable/component'
-const Bookmark = loadable(() => import('../../components/Generals/Bookmark'))
 
 const exampleCode = ` 
   <html>
