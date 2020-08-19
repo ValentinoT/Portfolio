@@ -2,6 +2,15 @@ import React from 'react'
 import { SingleBlog } from '../../components/SingleBlog'
 import { TextPost } from '../../components/SingleBlog/styles'
 import { Bookmark } from '../../components/Generals/Bookmark'
+import { CodeBlock } from '../../components/Generals/CodeBlock'
+
+const exampleCode = ` 
+  <html>
+    <code>
+      </h1>Hola</h1>
+    </code>
+  </html>
+`
 
 export default function QueEsReact () {
   return (
@@ -34,6 +43,7 @@ export default function QueEsReact () {
       </TextPost>
       <Bookmark url='https://es-la.facebook.com/' />
       <Bookmark url='https://www.youtube.com/watch?v=3hOgEcGAhDs' />
+      <CodeBlock exampleCode={exampleCode} />
     </SingleBlog>
   )
 }
