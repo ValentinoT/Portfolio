@@ -31,7 +31,7 @@ export const useMetadata = (url) => {
   }
 
   useEffect(() => {
-    fetch(`https://url-metadata.herokuapp.com/api/metadata?url=${url}`)
+    window.fetch(`https://url-metadata.herokuapp.com/api/metadata?url=${url}`)
       .then(function (response) {
         return response.json()
       })
