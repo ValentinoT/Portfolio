@@ -6,7 +6,7 @@ export const ContainerFooter = styled.footer`
   display: flex;
   align-items: center;
   padding: 20px;
-  ${({ blog, singleBlog }) => (blog || singleBlog) && css`
+  ${({ singleProject, blog, singleBlog }) => (singleProject || blog || singleBlog) && css`
     width: 100px;
     padding-right: 0;
     && .all-rights-reserved{

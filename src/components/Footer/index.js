@@ -8,13 +8,14 @@ import { ButtonContact } from '../../icons/ButtonContact'
 import { useMatch } from '@reach/router'
 
 export const Footer = () => {
-  const about = useMatch('sobre-mi')
-  const contact = useMatch('contacto')
-  const blog = useMatch('blog')
-  const singleBlog = useMatch('blog/:name')
+  const singleProject = useMatch('/proyectos/:name')
+  const about = useMatch('/sobre-mi')
+  const contact = useMatch('/contacto')
+  const blog = useMatch('/blog')
+  const singleBlog = useMatch('/blog/:name')
 
   return (
-    <ContainerFooter about={about} contact={contact} blog={blog} singleBlog={singleBlog}>
+    <ContainerFooter singleProject={singleProject} about={about} contact={contact} blog={blog} singleBlog={singleBlog}>
       <ContainerFooterLeft className='container-footer-left'>
         <SocialNetworks />
         <AllRightsReserved className='all-rights-reserved'>

@@ -11,7 +11,7 @@ export const ListProjects = () => {
   return (
     <ContainerListProjects>
       <CardProject
-        url='/'
+        url='/proyectos/proyecto-1'
         icons={[<HTML5 />, <CSS3 />, <Javascript />, <ReactIcon />, <Gatsby />]}
         imgDesktop='ProjectDesktop.jpg'
         imgTablet='ProjectTablet.jpg'
@@ -20,7 +20,7 @@ export const ListProjects = () => {
         description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ligula velit. Insollicitudin condimentum quam...'
       />
       <CardProject
-        url='/'
+        url='/proyectos/proyecto-1'
         icons={[<HTML5 />, <CSS3 />, <Javascript />, <ReactIcon />, <Gatsby />]}
         imgDesktop='ProjectDesktop2.jpg'
         imgTablet='ProjectTablet2.jpg'
@@ -29,7 +29,7 @@ export const ListProjects = () => {
         description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ligula velit. Insollicitudin condimentum quam...'
       />
       <CardProject
-        url='/'
+        url='/proyectos/proyecto-1'
         icons={[<HTML5 />, <CSS3 />, <Javascript />, <ReactIcon />, <Gatsby />]}
         imgDesktop='ProjectDesktop3.jpg'
         imgTablet='ProjectTablet3.jpg'
@@ -38,7 +38,7 @@ export const ListProjects = () => {
         description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ligula velit. Insollicitudin condimentum quam...'
       />
       <CardProject
-        url='/'
+        url='/proyectos/proyecto-1'
         icons={[<HTML5 />, <CSS3 />, <Javascript />, <ReactIcon />, <Gatsby />]}
         imgDesktop='ProjectDesktop4.jpg'
         imgTablet='ProjectTablet4.jpg'

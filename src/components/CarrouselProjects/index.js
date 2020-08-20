@@ -28,7 +28,7 @@ export const CarrouselProjects = () => {
     >
       <SwiperSlide>
         <CardProject
-          url='/'
+          url='/proyectos/proyecto-1'
           icons={[<HTML5 />, <CSS3 />, <Javascript />, <ReactIcon />, <Gatsby />]}
           imgDesktop='ProjectDesktop.jpg'
           imgTablet='ProjectTablet.jpg'
@@ -39,7 +39,7 @@ export const CarrouselProjects = () => {
       </SwiperSlide>
       <SwiperSlide>
         <CardProject
-          url='/'
+          url='/proyectos/proyecto-1'
           icons={[<HTML5 />, <CSS3 />, <Javascript />, <ReactIcon />, <Gatsby />]}
           imgDesktop='ProjectDesktop2.jpg'
           imgTablet='ProjectTablet2.jpg'
@@ -50,7 +50,7 @@ export const CarrouselProjects = () => {
       </SwiperSlide>
       <SwiperSlide>
         <CardProject
-          url='/'
+          url='/proyectos/proyecto-1'
           icons={[<HTML5 />, <CSS3 />, <Javascript />, <ReactIcon />, <Gatsby />]}
           imgDesktop='ProjectDesktop3.jpg'
           imgTablet='ProjectTablet3.jpg'
@@ -61,7 +61,7 @@ export const CarrouselProjects = () => {
       </SwiperSlide>
       <SwiperSlide>
         <CardProject
-          url='/'
+          url='/proyectos/proyecto-1'
           icons={[<HTML5 />, <CSS3 />, <Javascript />, <ReactIcon />, <Gatsby />]}
           imgDesktop='ProjectDesktop4.jpg'
           imgTablet='ProjectTablet4.jpg'

@@ -63,7 +63,7 @@ export const ArchiveBlog = () => {
           rutrum.'
         />
         <Post
-          url='/'
+          url='/blog/que-es-react'
           image='que-es-ecmascript.jpg'
           title='Que es Ecmascript?'
           date='27/07/20'
@@ -72,7 +72,7 @@ export const ArchiveBlog = () => {
           ligula sit amet luctus. Vestibulum ac venenatis urna.'
         />
         <Post
-          url='/'
+          url='/blog/que-es-react'
           image='asincronismo-javascript.jpg'
           title='Asincronismo en JS'
           date='27/07/20'
@@ -81,7 +81,7 @@ export const ArchiveBlog = () => {
           ligula sit amet luctus. Vestibulum ac venenatis urna.'
         />
         <Post
-          url='/'
+          url='/blog/que-es-react'
           image='domina-react-com-1.png'
           title=' React en Colombia'
           date='27/07/20'
@@ -90,7 +90,7 @@ export const ArchiveBlog = () => {
           ligula sit amet luctus. Vestibulum ac venenatis urna.'
         />
         <Post
-          url='/'
+          url='/blog/que-es-react'
           image='static-site-ghost-gatsby-js-1.jpg'
           title='Que es Gatsby?'
           date='27/07/20'

@@ -8,7 +8,7 @@ export const MyHeader = styled.header`
     padding: 16px;
     flex-wrap: wrap;
   }
-  ${({ blog, singleBlog }) => (blog || singleBlog) && css`
+  ${({ singleProject, blog, singleBlog }) => (singleProject || blog || singleBlog ) && css`
     min-height: 120px;
     && .containerImage{
       position: fixed;
@@ -43,10 +43,10 @@ export const ContainerImage = styled.div`
 export const ContainerText = styled.div`
   flex-grow: 1;
   padding: 0 20px;
-  ${({ about, contact, blog, singleBlog }) => (about || contact || blog || singleBlog) && css`
+  ${({ singleProject, about, contact, blog, singleBlog }) => (singleProject || about || contact || blog || singleBlog) && css`
     align-self: center;
   `}
-  ${({ blog, singleBlog }) => (blog || singleBlog) && css`
+  ${({ singleProject, blog, singleBlog }) => (singleProject || blog || singleBlog) && css`
     margin-left: 80px;
     @media ${device.tablet}{
       margin-left: 0;

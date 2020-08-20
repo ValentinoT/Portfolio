@@ -12,10 +12,11 @@ import { useMatch } from '@reach/router'
 
 export const Navbar = () => {
   const matchProjects = useMatch('/')
+  const matchSingleProject = useMatch('/proyectos/:name')
   const matchAbout = useMatch('/sobre-mi')
   const matchBlog = useMatch('/blog')
   const matchContact = useMatch('/contacto')
-  const matchSingleBlog = useMatch('blog/:name')
+  const matchSingleBlog = useMatch('/blog/:name')
 
   useEffect(() => {
     const projects = document.querySelector('#projects')
@@ -23,7 +24,7 @@ export const Navbar = () => {
     const blog = document.querySelector('#blog')
     const contacto = document.querySelector('#contacto')
 
-    if (matchProjects) {
+    if (matchProjects || matchSingleProject) {
       projects.classList.add('active')
     } else {
       projects.classList.remove('active')
@@ -46,10 +47,10 @@ export const Navbar = () => {
     } else {
       contacto.classList.remove('active')
     }
-  }, [matchProjects, matchAbout, matchBlog, matchContact])
+  }, [matchProjects, matchSingleProject, matchAbout, matchBlog, matchSingleBlog, matchContact])
 
   return (
-    <ContainerMenuVertical blog={matchBlog} singleBlog={matchSingleBlog}>
+    <ContainerMenuVertical singleProject={matchSingleProject} blog={matchBlog} singleBlog={matchSingleBlog}>
       <ContainerMenu>
         <StyledLink to='/contacto' activeClassName='active' id='contacto'>
           <ContainerIcon>
