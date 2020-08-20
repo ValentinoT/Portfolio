@@ -8,18 +8,18 @@ export const useMetadata = (url) => {
 
   const CleanText = (text) => {
     if (text !== null) {
-      let textReady = text.replaceAll('&#xe1;', 'á')
-      textReady = textReady.replaceAll('&#xE1;', 'á')
-      textReady = textReady.replaceAll('&#xe9;', 'é')
-      textReady = textReady.replaceAll('&#xE9;', 'é')
-      textReady = textReady.replaceAll('&#xed;', 'í')
-      textReady = textReady.replaceAll('&#xED;', 'í')
-      textReady = textReady.replaceAll('&#xf3;', 'ó')
-      textReady = textReady.replaceAll('&#xF3;', 'ó')
-      textReady = textReady.replaceAll('&#xfa;', 'ú')
-      textReady = textReady.replaceAll('&#xFA;', 'ú')
-      textReady = textReady.replaceAll('&#xf1;', 'ñ')
-      textReady = textReady.replaceAll('&#xF1;', 'ñ')
+      let textReady = text.split('&#xe1;').join('á')
+      textReady = textReady.split('&#xE1;').join('á')
+      textReady = textReady.split('&#xe9;').join('é')
+      textReady = textReady.split('&#xE9;').join('é')
+      textReady = textReady.split('&#xed;').join('í')
+      textReady = textReady.split('&#xED;').join('í')
+      textReady = textReady.split('&#xf3;').join('ó')
+      textReady = textReady.split('&#xF3;').join('ó')
+      textReady = textReady.split('&#xfa;').join('ú')
+      textReady = textReady.split('&#xFA;').join('ú')
+      textReady = textReady.split('&#xf1;').join('ñ')
+      textReady = textReady.split('&#xF1;').join('ñ')
       textReady = textReady.substr(0, 125)
 
       return textReady
