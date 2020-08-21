@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Portafolio Valentino Torres',
-    description: 'Valentino Torres Descripción',
+    title: 'Valentino Torres',
+    description: 'Soy un frontend developer. Venezolano, pero actualmente viviendo en Colombia. Puedes encontrarme en las principales redes sociales como @ValentinoTorresDev. Me dedico al desarrollo de aplicaciones web y móviles.',
     author: 'ValentinoTorresDev'
   },
   plugins: [
