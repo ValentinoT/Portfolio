@@ -4,14 +4,15 @@ export const useTheme = () => {
   const [theme, setTheme] = useState('light')
 
   useEffect(() => {
-    const themeOS = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light'
+    // const themeOS = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    //   ? 'dark'
+    //   : 'light'
 
     const localTheme = window.localStorage.getItem('theme')
 
-    themeOS && !localTheme
-      ? setTheme(themeOS)
+    // themeOS &&
+    !localTheme
+      ? setTheme('dark')
       : localTheme && setTheme(localTheme)
   }, [])
 
