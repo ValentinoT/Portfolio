@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Swiper } from 'swiper/react'
+import { device } from '../styles/Generals'
 
 export const CarrouselProjectsContainer = styled(Swiper)`
   max-height: calc(100vh - 211px);
@@ -16,13 +17,7 @@ export const CarrouselProjectsContainer = styled(Swiper)`
   && .swiper-wrapper{
     margin-left: 20px;
   }
-  @media (max-width: 1723px) {
-    max-height: calc(100vh - 225px);
-  }
-  @media (max-width: 1024px) {
-    max-height: calc(100vh - 236px);
-  }
-  @media (max-width: 963px) {
-    max-height: calc(100vh - 256px);
+  @media ${device.laptop}{
+    max-height: calc(100vh - 222px);
   }
 `

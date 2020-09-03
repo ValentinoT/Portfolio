@@ -23,26 +23,22 @@ export const Header = ({ toggleTheme, themeMode }) => {
         <Title>Valentino Torres</Title>
         {pathname === '/'
           ? <Text pt='10px'>
-            Soy un frontend developer. Venezolano, pero actualmente viviendo en Colombia. Puedes
-            encontrarme en las principales redes sociales como @ValentinoTorresDev. Me dedico al desarrollo
-            de aplicaciones web y móviles.
-            </Text>
+            Soy un frontend developer. Me dedico al desarrollo de aplicaciones web.
+          </Text>
           : ''}
       </ContainerText>
       <ContainerTextTablet>
         {pathname === '/'
           ? <Text pt='10px'>
-            Soy un frontend developer. Venezolano, pero actualmente viviendo en Colombia. Puedes
-            encontrarme en las principales redes sociales como @ValentinoTorresDev. Me dedico al desarrollo
-            de aplicaciones web y móviles.
-            </Text>
+            Soy un frontend developer. Me dedico al desarrollo de aplicaciones web.
+          </Text>
           : ''}
       </ContainerTextTablet>
       <ContainerTextMovile>
         {pathname === '/'
           ? <Text pt='10px'>
-            Soy un frontend developer. Me dedico al desarrollo de aplicaciones web y móviles.
-            </Text>
+            Soy un frontend developer. Me dedico al desarrollo de aplicaciones web.
+          </Text>
           : ''}
       </ContainerTextMovile>
       <ButtonToggleTheme onClick={toggleTheme} themeMode={themeMode}>

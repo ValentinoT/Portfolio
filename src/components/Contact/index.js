@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContainerContact, ContainerForm, ContainerInformation, ContainerPhone, ContainerEmail, LinkInfo } from './styles'
+import { ContainerContact, ContainerForm, ContainerInformation, ContainerPhone, ContainerEmail, LinkInfo, AntiSpam } from './styles'
 import { ContactForm } from '../ContactForm'
 import { SubTitle, Text } from '../styles/Generals'
 import { SocialNetworks } from '../Generals/SocialNetworks'
@@ -20,8 +20,8 @@ export const Contact = () => {
         </ContainerPhone>
         <ContainerEmail>
           <SubTitle size='20px' weight='500'>Email:</SubTitle>
-          <LinkInfo href='mailto:info@valentinotorres.com'>
-            <Text size='18px'>info@valentinotorres.com</Text>
+          <LinkInfo href='mailto:job@valentinotorres.dev'>
+            <Text size='18px'>job<AntiSpam>spam5786</AntiSpam><code>&#64;</code><AntiSpam>spam1732</AntiSpam>valentinotorres.dev</Text>
           </LinkInfo>
         </ContainerEmail>
         <SocialNetworks />

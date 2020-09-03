@@ -4,7 +4,8 @@ import { Link } from 'gatsby'
 
 export const CardProjectContainer = styled(Link)`
   background-color: ${({ theme }) => theme.colors.backgroundCardProject};
-  width: 300px;
+  width: 22vw;
+  min-width: 300px;
   height: 80%;
   border-radius: 5px;
   cursor: pointer;

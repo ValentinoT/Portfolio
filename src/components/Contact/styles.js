@@ -95,3 +95,7 @@ export const LinkInfo = styled.a`
     margin: 0 0 32px 0;
   }
 `
+
+export const AntiSpam = styled.span`
+  display: none;
+`

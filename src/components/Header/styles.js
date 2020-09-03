@@ -8,7 +8,7 @@ export const MyHeader = styled.header`
     padding: 16px;
     flex-wrap: wrap;
   }
-  ${({ singleProject, blog, singleBlog }) => (singleProject || blog || singleBlog ) && css`
+  ${({ singleProject, blog, singleBlog }) => (singleProject || blog || singleBlog) && css`
     min-height: 120px;
     && .containerImage{
       position: fixed;
