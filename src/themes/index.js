@@ -14,7 +14,8 @@ export const themes = {
       gradientProjectBottom: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%)',
       iconText: '#202020',
       error: '#FF4949',
-      border: 'rgba(55, 53, 47, 0.20)'
+      border: 'rgba(55, 53, 47, 0.20)',
+      title404: 'rgba(0,0,0, .1)'
     }
   },
   dark: {
@@ -32,7 +33,8 @@ export const themes = {
       gradientProjectBottom: 'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(40, 40, 40, 0.8) 100%)',
       iconText: '#FFFFFF',
       error: '#FF4949',
-      border: 'rgba(255, 255, 255, 0.20)'
+      border: 'rgba(255, 255, 255, 0.20)',
+      title404: 'rgba(255,255,255, .1)'
     }
   }
 }
