@@ -49,8 +49,9 @@ const Post = ({ url, image, title, date, read, extract }) => {
 export const ArchiveBlog = () => {
   return (
     <ContainerBlog>
-      <SubTitle size='28px'>Últimos Posts</SubTitle>
-      <GridPost>
+      <SubTitle size='28px' center>En Construcción</SubTitle>
+      {/* <SubTitle size='28px'>Últimos Posts</SubTitle> */}
+      {/* <GridPost>
         <LastPost
           url='/blog/que-es-react'
           image='porque-react.jpg'
@@ -99,7 +100,7 @@ export const ArchiveBlog = () => {
           ligula sit amet luctus. Vestibulum ac venenatis urna.'
         />
 
-      </GridPost>
+      </GridPost> */}
     </ContainerBlog>
   )
 }

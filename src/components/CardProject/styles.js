@@ -14,7 +14,7 @@ export const CardProjectContainer = styled(Link)`
   padding: 10px;
   display: grid;
   grid-template-columns: 150px auto;
-  grid-template-rows: 50%;
+  grid-template-rows: ${({ singleApp }) => singleApp ? '100%' : '50%'};
   column-gap: 10px;
   row-gap: 10px;
   position: relative;
@@ -88,6 +88,14 @@ export const ContainerHeaderIcons = styled.div`
   }
   && div:last-child{
     margin-right: 0;
+  }
+  && div{
+    height: 20px;
+    width: auto;
+  }
+  && div svg{
+    width: auto;
+    height: 20px;
   }
 `
 

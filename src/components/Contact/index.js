@@ -12,12 +12,12 @@ export const Contact = () => {
         <ContactForm />
       </ContainerForm>
       <ContainerInformation>
-        <ContainerPhone>
+        {/* <ContainerPhone>
           <SubTitle size='20px' weight='500'>Teléfono:</SubTitle>
           <LinkInfo href='tel:573222826936'>
             <Text size='18px'>+57 322 2826936</Text>
           </LinkInfo>
-        </ContainerPhone>
+        </ContainerPhone> */}
         <ContainerEmail>
           <SubTitle size='20px' weight='500'>Email:</SubTitle>
           <LinkInfo href='mailto:job@valentinotorres.dev'>

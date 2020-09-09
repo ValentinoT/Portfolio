@@ -46,6 +46,33 @@ export const TextSingle = styled.p`
   line-height: 26px;
   padding: 10px 0;
   text-align: justify;
+  && a {
+    color: ${({ theme }) => theme.colors.text};
+    text-decoration: none;
+  }
+`
+
+export const ContainerList = styled.ul`
+  padding: 10px 0;
+`
+
+export const ContainerListItem = styled.li`
+  display: flex;
+  list-style: none;
+  & p {
+    padding: 5px 0;
+  }
+`
+
+export const PointListItem = styled.span`
+  background: ${({ theme }) => theme.colors.title};
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-top: 14px;
+  margin-right: 10px;
+  flex-shrink: 0;
 `
 
 export const ContainerTechnologies = styled.div`
@@ -53,10 +80,15 @@ export const ContainerTechnologies = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  && div div{
+    margin-left: 20px;
+  }
+  && div div:first-child{
+    margin-left: 0;
+  }
   && svg{
     width: auto;
     height: 32px;
-    margin-left: 20px;
   }
   @media ${device.tablet}{
     flex-direction: column;
@@ -80,7 +112,7 @@ export const ContainerButtons = styled.div`
 
 export const Anchor = styled.a`
   text-decoration: none;
-  width: calc(50% - 20px);
+  width: ${({ oneButton }) => oneButton ? '100%' : 'calc(50% - 20px)'};
   && button{
     width: 100%;
     text-align: center;

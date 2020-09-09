@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Icon } from './styles'
 
-export function HTML5 (props) {
+const HTML5 = (props) => {
   return (
     <Icon width={12} height={16} viewBox='0 0 12 16' fill='none' {...props}>
       <g clipPath='url(#prefix__clip0)'>
@@ -30,3 +30,5 @@ export function HTML5 (props) {
     </Icon>
   )
 }
+
+export default HTML5

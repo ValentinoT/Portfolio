@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export function Gatsby (props) {
+const Gatsby = (props) => {
   return (
     <svg width={16} height={16} viewBox='0 0 16 16' fill='none' {...props}>
       <path
@@ -10,3 +10,5 @@ export function Gatsby (props) {
     </svg>
   )
 }
+
+export default Gatsby

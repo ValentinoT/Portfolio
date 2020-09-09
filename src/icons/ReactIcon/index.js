@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export function ReactIcon (props) {
+const ReactIcon = (props) => {
   return (
     <svg width={18} height={16} viewBox='0 0 18 16' fill='none' {...props}>
       <g clipPath='url(#prefix__clip0)'>
@@ -12,3 +12,5 @@ export function ReactIcon (props) {
     </svg>
   )
 }
+
+export default ReactIcon

@@ -3,7 +3,7 @@ import { ContainerSingle, PostWidth, ContainerImagePost, TitleSingle, SubTitleSi
 import { Image } from '../Image'
 import { Button } from '../Generals/Button'
 
-export const Single = ({ children, img = null, title = 'Title', icons = null, urlProject = null, urlRepository = null }) => {
+export const Single = ({ children, img = null, title = 'Title', icons = null, urlProject = null, urlRepository = null, oneButton = false }) => {
   return (
     <ContainerSingle>
       <PostWidth>
@@ -26,15 +26,16 @@ export const Single = ({ children, img = null, title = 'Title', icons = null, ur
               }
             </ContainerIcons>
           </ContainerTechnologies>}
-        {(urlProject && urlRepository) &&
-          <ContainerButtons>
-            <Anchor href={urlProject} target='_blank'>
+        <ContainerButtons>
+          {urlProject &&
+            <Anchor href={urlProject} target='_blank' oneButton={oneButton}>
               <Button>Proyecto</Button>
-            </Anchor>
-            <Anchor href={urlRepository} target='_blank'>
+            </Anchor>}
+          {urlRepository &&
+            <Anchor href={urlRepository} target='_blank' oneButton={oneButton}>
               <Button>Repositorio</Button>
-            </Anchor>
-          </ContainerButtons>}
+            </Anchor>}
+        </ContainerButtons>
       </PostWidth>
     </ContainerSingle>
   )

@@ -1,50 +1,75 @@
 import React from 'react'
 import { ContainerListProjects } from './styles'
 import { CardProject } from '../CardProject'
-import { HTML5 } from '../../icons/HTML5'
-import { CSS3 } from '../../icons/CSS3'
-import { Javascript } from '../../icons/Javascript'
-import { ReactIcon } from '../../icons/ReactIcon'
-import { Gatsby } from '../../icons/Gatsby'
+import { Javascript, ReactIcon, Gatsby, MaterialUI, GrapQL, StyledComponents, Stripe, Redux, Next, PHP, Wordpress, Elementor } from '../../icons'
 
 export const ListProjects = () => {
   return (
     <ContainerListProjects>
       <CardProject
-        url='/proyectos/proyecto-1'
-        icons={[<HTML5 />, <CSS3 />, <Javascript />, <ReactIcon />, <Gatsby />]}
-        imgDesktop='ProjectDesktop.jpg'
-        imgTablet='ProjectTablet.jpg'
-        imgMobile='ProjectMobile.jpg'
-        title='Título del Proyecto 1'
-        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ligula velit. Insollicitudin condimentum quam...'
+        url='/proyectos/lovicon'
+        icons={[<Javascript />, <ReactIcon />, <Gatsby />, <MaterialUI />]}
+        imgDesktop='Lovicon-desktop.jpg'
+        imgTablet='Lovicon-tablet.png'
+        imgMobile='Lovicon-mobile.png'
+        title='Lovicon'
+        description='Lovicon es una empresa que se dedica a la creación de tiendas físicas, con el fin de brindar una gran experiencia...'
       />
       <CardProject
-        url='/proyectos/proyecto-1'
-        icons={[<HTML5 />, <CSS3 />, <Javascript />, <ReactIcon />, <Gatsby />]}
-        imgDesktop='ProjectDesktop2.jpg'
-        imgTablet='ProjectTablet2.jpg'
-        imgMobile='ProjectMobile2.jpg'
-        title='Título del Proyecto 1'
-        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ligula velit. Insollicitudin condimentum quam...'
+        url='/proyectos/petgram'
+        icons={[<Javascript />, <ReactIcon />, <GrapQL />, <StyledComponents />]}
+        imgDesktop='Petgram-mobile.jpg'
+        imgTablet='Petgram-mobile.jpg'
+        imgMobile='Petgram-mobile.jpg'
+        title='Petgram'
+        description='Petgram es un clon de instagram, centrado en las mascotas. Desarrollada con React, una biblioteca que nos permite...'
+        singleApp
       />
       <CardProject
-        url='/proyectos/proyecto-1'
-        icons={[<HTML5 />, <CSS3 />, <Javascript />, <ReactIcon />, <Gatsby />]}
-        imgDesktop='ProjectDesktop3.jpg'
-        imgTablet='ProjectTablet3.jpg'
-        imgMobile='ProjectMobile3.jpg'
-        title='Título del Proyecto 1'
-        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ligula velit. Insollicitudin condimentum quam...'
+        url='/proyectos/platzi-swag'
+        icons={[<Javascript />, <ReactIcon />, <GrapQL />, <Stripe />]}
+        imgDesktop='PlatziSwag-desktop.png'
+        imgTablet='PlatziSwag-tablet.png'
+        imgMobile='PlatziSwag-mobile.png'
+        title='Platzi Swag'
+        description='Platzi swag en una tienda construida con Gatsby JS. Gatsby es un generador de sitios estáticos, con lo cual obtenemos seguridad y velocidad en nuestros proyectos...'
       />
       <CardProject
-        url='/proyectos/proyecto-1'
-        icons={[<HTML5 />, <CSS3 />, <Javascript />, <ReactIcon />, <Gatsby />]}
-        imgDesktop='ProjectDesktop4.jpg'
-        imgTablet='ProjectTablet4.jpg'
-        imgMobile='ProjectMobile4.jpg'
-        title='Título del Proyecto 1'
-        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ligula velit. Insollicitudin condimentum quam...'
+        url='/proyectos/platzi-video'
+        icons={[<Javascript />, <ReactIcon />, <Redux />]}
+        imgDesktop='Platzi-video.jpg'
+        imgTablet='Platzi-video.jpg'
+        imgMobile='Platzi-video.jpg'
+        title='Platzi Video'
+        description='Platzi Video es una app para ver la información y los trailers de tus películas favoritas. Está desarrollada con react native...'
+        singleApp
+      />
+      <CardProject
+        url='/proyectos/podcast-app'
+        icons={[<Javascript />, <ReactIcon />, <Next />]}
+        imgDesktop='PodcastApp-desktop.png'
+        imgTablet='PodcastApp-tablet.png'
+        imgMobile='PodcastApp-mobile.png'
+        title='Podcast App'
+        description='Esta App de podcast está construida con Next JS. Next permite que nuestras aplicaciones tengan SSR (Server Side Render). El servidor genera la vista del sitio que solicitemos...'
+      />
+      <CardProject
+        url='/proyectos/blog-platzi'
+        icons={[<Javascript />, <ReactIcon />, <Redux />]}
+        imgDesktop='BlogPlatzi-desktop.png'
+        imgTablet='BlogPlatzi-tablet.png'
+        imgMobile='BlogPlatzi-mobile.png'
+        title='Platzi Blog'
+        description='Proyecto del curso de redux en platzi. Gestionamos todo el flujo de datos de nuestro blog con redux, además de aplicar...'
+      />
+      <CardProject
+        url='/proyectos/global'
+        icons={[<Javascript />, <PHP />, <Wordpress />, <Elementor />]}
+        imgDesktop='Global-desktop.jpg'
+        imgTablet='Global-tablet.png'
+        imgMobile='Global-mobile.png'
+        title='Global'
+        description='Global es una compañía de asesoramiento de inversiones. Necesitaban un sitio altamente administrable para manejar todas su...'
       />
     </ContainerListProjects>
   )

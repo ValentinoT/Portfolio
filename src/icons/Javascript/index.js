@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export function Javascript (props) {
+const Javascript = (props) => {
   return (
     <svg width={16} height={16} viewBox='0 0 16 16' fill='none' {...props}>
       <path d='M0 0h16v16H0V0z' fill='#F7DF1E' />
@@ -11,3 +11,4 @@ export function Javascript (props) {
     </svg>
   )
 }
+export default Javascript

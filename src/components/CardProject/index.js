@@ -1,9 +1,7 @@
 import React from 'react'
 import { CardProjectContainer, HeaderProject, ContainerHeaderTextBox, HeaderTitle, ContainerHeaderIcons, ContainerImageDesktop, ContainerImageTablet, ContainerImageMobile, FooterProject, TitleProject, ShortDescription } from './styles'
 import { Image } from '../Image'
-import { HTML5 } from '../../icons/HTML5'
-import { CSS3 } from '../../icons/CSS3'
-import { Javascript } from '../../icons/Javascript'
+import { HTML5, CSS3, Javascript } from '../../icons'
 
 export const CardProject = (
   {
@@ -13,11 +11,12 @@ export const CardProject = (
     imgTablet = 'ProjectTablet.jpg',
     imgMobile = 'ProjectMobile.jpg',
     title = 'Título del Proyecto',
-    description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ligula velit. Insollicitudin condimentum quam...'
+    description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a ligula velit. Insollicitudin condimentum quam...',
+    singleApp = false
   }
 ) => {
   return (
-    <CardProjectContainer to={url}>
+    <CardProjectContainer to={url} singleApp={singleApp}>
       <HeaderProject className='headerProject'>
         <ContainerHeaderTextBox>
           <HeaderTitle>Tecnologías</HeaderTitle>
@@ -33,12 +32,15 @@ export const CardProject = (
       <ContainerImageDesktop>
         <Image name={imgDesktop} />
       </ContainerImageDesktop>
-      <ContainerImageTablet>
-        <Image name={imgTablet} />
-      </ContainerImageTablet>
-      <ContainerImageMobile>
-        <Image name={imgMobile} />
-      </ContainerImageMobile>
+      {singleApp === false &&
+        <>
+          <ContainerImageTablet>
+            <Image name={imgTablet} />
+          </ContainerImageTablet>
+          <ContainerImageMobile>
+            <Image name={imgMobile} />
+          </ContainerImageMobile>
+        </>}
       <FooterProject className='footerProject'>
         <TitleProject>{title}</TitleProject>
         <ShortDescription>

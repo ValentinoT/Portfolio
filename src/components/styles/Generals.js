@@ -52,6 +52,7 @@ export const SubTitle = styled.h3`
   font-size: ${({ size = '16px' }) => size};
   font-weight: ${({ weight = 400 }) => weight};
   transition: all 0.15s linear;
+  text-align: ${({ center }) => center ? 'center' : 'left'}; 
   @media ${device.mobileM}{
     font-size: 14px;
   }
