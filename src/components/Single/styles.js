@@ -45,7 +45,7 @@ export const TextSingle = styled.p`
   font-weight: 300;
   line-height: 26px;
   padding: 10px 0;
-  text-align: justify;
+  text-align: left;
   && a {
     color: ${({ theme }) => theme.colors.text};
     text-decoration: none;

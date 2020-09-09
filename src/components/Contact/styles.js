@@ -83,7 +83,10 @@ export const ContainerEmail = styled.div`
   }
   @media (max-width: 500px){
     width: 100%;
-    text-align: center;
+    && h3,
+    && p{
+      text-align: center;
+    }
   }
 `
 
