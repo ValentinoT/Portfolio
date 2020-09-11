@@ -42,6 +42,7 @@ export const CardProjectContainer = styled(Link)`
   }
   @media ${device.mobileM}{
     height: 450px;
+    min-width: auto;
   }
   @media ${device.mobileS}{
     height: 400px;
